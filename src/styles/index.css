@@ -1,0 +1,49 @@
+.icon {
+    display: inline-block;
+    width: var(--text-4xl);
+    height: var(--text-4xl);
+    vertical-align: -0.125em;
+}
+
+.konata {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transition: .5s;
+}
+
+.peek {
+    transform: translateY(50px);
+}
+
+.jump {
+    transform: translateY(-15px);
+    transition: .15s;
+}
+
+.gone {
+    transform: translateY(200px);
+}
+
+#dialog {
+    transition: .5s;
+}
+
+#dialog.hide {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+#socmed {
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+}
+
+#socmed.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

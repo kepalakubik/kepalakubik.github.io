@@ -1,0 +1,6 @@
+{
+    "css.styleSheets": ["src/styles/*.css"],
+    "editor.quickSuggestions": {
+        "strings": "on"
+    }
+}  
