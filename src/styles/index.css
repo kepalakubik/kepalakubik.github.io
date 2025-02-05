@@ -3,6 +3,12 @@
     width: var(--text-4xl);
     height: var(--text-4xl);
     vertical-align: -0.125em;
+    margin-right: 0.3rem;
+    transition: .3s;
+}
+
+.icon:hover {
+    transform: translateY(-5px) scale(1.1);
 }
 
 .konata {
