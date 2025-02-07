@@ -1,7 +1,13 @@
 ---
-const { href, label } = Astro.props;
+interface Props {
+    href: string;
+    label: string;
+    class?: string; 
+}
+
+const { class: className, href, label } = Astro.props;
 ---
 
-<a href={href} aria-label={label} class="icon h-8 w-8 rounded-full border-2 border-white p-1.5 flex items-center justify-center transition duration-200 hover:bg-white hover:text-black">
+<a href={href} aria-label={label} class:list={[ className, "icon h-8 w-8 rounded-full border-2 border-white p-1.5 flex items-center justify-center transition duration-200 hover:bg-white hover:text-black" ]}>
     <slot />
 </a>

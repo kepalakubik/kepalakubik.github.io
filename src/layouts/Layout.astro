@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 ---
 
@@ -13,6 +14,7 @@ import "../styles/global.css";
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 		<title>Ryan</title>
+		<ClientRouter />
 	</head>
 	<body class="font-sans bg-gradient-to-tr bg-fixed from-indigo-900 to-sky-700 text-white">
 		<slot />
