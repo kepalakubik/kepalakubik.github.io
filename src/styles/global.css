@@ -4,3 +4,7 @@ body, html {
     min-height: 100%;
     height: auto;
 }
+
+body {
+    font-family: "Inter", sans-serif;
+}

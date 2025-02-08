@@ -9,12 +9,16 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 		<title>Ryan</title>
 	</head>
-	<body class="font-sans bg-gradient-to-tr bg-fixed from-indigo-900 to-sky-700 text-white">
+	<body class="bg-gradient-to-tr bg-fixed from-indigo-900 to-sky-700 text-white">
 		<slot />
 	</body>
 </html>
