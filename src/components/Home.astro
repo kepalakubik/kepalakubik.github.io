@@ -1,13 +1,14 @@
 ---
 import SocmedBtn from "./SocmedBtn.astro";
 import Navbar from "./Navbar.astro";
+import Footer from "./Footer.astro";
 ---
 
 <Navbar />
 
 <main class="max-w-6xl mx-auto p-4 flex flex-col sm:flex-row">
     <!-- Left -->
-    <div class="w-full justify-center p-4 sm:w-70 rounded-lg mb-4 sm:mb-0 sm:mr-4 text-center border-4 text-white border-white sm:sticky top-4 self-start">
+    <div class="sm:sticky top-17 w-full justify-center p-4 sm:w-70 rounded-lg mb-4 sm:mb-0 sm:mr-4 text-center border-4 text-white border-white self-start">
         <img src="/favicon.svg" alt="Ryan" width="100%" class="rounded-md w-40 mx-auto sm:w-full mb-3">
         <h1 class="text-xl font-semibold mb-2">Ryan</h1>
         <p class="text-sm">
@@ -42,6 +43,7 @@ import Navbar from "./Navbar.astro";
     <!-- Right -->
     <div class="w-full sm:flex-grow space-y-4">
         <slot />
+        <Footer />
     </div>
 </main>
 
