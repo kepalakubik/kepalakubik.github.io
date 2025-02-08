@@ -1,8 +1,33 @@
 ---
 import Home from '../components/Home.astro';
 import Layout from '../layouts/Layout.astro';
+import Section from "../components/Section.astro";
+import ProjectBoxes from "../components/ProjectBoxes.astro"
 ---
 
 <Layout>
-	<Home />
+<Home>
+	<Section>
+		<h3 class="text-3xl font-semibold mb-3">About</h3>
+		<p>
+			So uhh... Hey! Welcome to my humble website.
+			<br>
+			I'm <b>Ryan</b>, a.k.a <b>KepalaKubik / CubicHead</b>.
+			<br>
+			A lazy programmer, a professional in sleep science, and a cat lover.
+			<br><br>
+			I usually code in Typescript, but sometimes in other high-level programming languages ​if needed.
+			<br>
+			Simply put, I am a general practitioner in programming.
+		</p>
+	</Section>
+	
+	<Section>
+		<h3 class="text-3xl font-semibold mb-3">Projects</h3>
+		
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+			<ProjectBoxes />
+		</div>
+	</Section>		
+</Home>
 </Layout>
