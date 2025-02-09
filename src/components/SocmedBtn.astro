@@ -8,6 +8,6 @@ interface Props {
 const { class: className, href, label } = Astro.props;
 ---
 
-<a href={href} aria-label={label} class:list={[ className, "icon h-8 w-8 rounded-full border-2 border-white p-1.5 flex items-center justify-center transition duration-200 hover:bg-white hover:text-black" ]}>
+<a href={href} aria-label={label} class:list={[ className, "icon h-8 w-8 rounded-full border-2 border-white p-1.5 flex items-center justify-center transition duration-200 active:bg-white active:text-black hover:bg-white hover:text-black" ]}>
     <slot />
 </a>
