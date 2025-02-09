@@ -1,7 +1,8 @@
 [{
     "name": "Anigure",
     "description": "Sebuah konsep website marketplace online untuk berjualan action figure",
-    "repo": "https://github.com/kepalakubik/Anigure"
+    "repo": "https://github.com/kepalakubik/Anigure",
+    "website": "https://kepalakubik.my.id/Anigure"
 },
 {
     "name": "PanicButton",
