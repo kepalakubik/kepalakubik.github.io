@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 
 const title = "Ryan";
 const description = "The laziest programmer and professional sleeper";
@@ -41,6 +42,27 @@ const image = url + "/banner.webp";
 		<meta property="twitter:image" content={image} />
 	</head>
 	<body class="bg-gradient-to-tr bg-fixed from-sky-600 to-cyan-600 text-white">
+		<Navbar />
 		<slot />
+
+		<div id="top" class="cursor-pointer fixed w-11 h-11 bottom-2 right-2 rounded-full text-4xl bg-white flex items-center justify-center text-black shadow-md transition duration-300 translate-y-17">
+			<i class="bi-caret-up"></i>
+		</div>
 	</body>
+	
+	<script>
+		const top = document.getElementById("top");
+		
+		top?.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 200) {
+				top?.classList.remove("translate-y-17")
+			} else {
+				top?.classList.add("translate-y-17");
+			}
+		});
+	</script>
 </html>

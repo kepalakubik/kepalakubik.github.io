@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <main class="w-full h-screen flex flex-col items-center justify-center p-3">
-        <h2 class="text-2xl text-center mb-3">
+    <main class="w-full md:h-[calc(100vh-3.25rem)] flex flex-col gap-y-3 md:flex-row justify-around items-center p-3">
+        <h2 class="text-2xl text-center">
             404 Not Found
             <br>
             But hey! Enjoy this cute cat picture!
         </h2>
-        <a href="/">
-            <img src="https://cataas.com/cat?type=small" alt="Cute Cat" width="300" class="rounded-md">
+        <a href="/" class="rounded-md p-2 border-2 border-dashed">
+            <img src="https://cataas.com/cat?type=square" alt="Cute Cat" width="300" class="rounded-sm">
         </a>
     </main>
 </Layout>

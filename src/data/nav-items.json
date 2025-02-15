@@ -1,0 +1,16 @@
+[{
+    "name": "About",
+    "url": "/#about"
+},
+{
+    "name": "Projects",
+    "url": "/#projects"
+},
+{
+    "name": "Blog",
+    "url": "/blog"
+},
+{
+    "name": "Trakteer",
+    "url": "#"
+}]
