@@ -10,15 +10,20 @@ import navs from '../data/nav-items.json';
         </a>
 
         <div class="hidden sm:flex">
-            {navs.map(nav => (
-                <a href={nav.url} class="font-bold h-9 flex rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
-                    {nav.name}
-                    
-                    {!nav.url.startsWith("/") && (
-                        <i class="ml-1.5 bi-box-arrow-up-right"></i>
-                    )}
-                </a>
-            ))}
+            {navs.map(nav => {
+                const isNavInternal = nav.url.startsWith("/");
+                const target = isNavInternal ? undefined : "_blank";
+
+                return (
+                    <a href={nav.url} target={target} class="font-bold h-9 flex rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
+                        {nav.name}
+                        
+                        {!isNavInternal && (
+                            <i class="ml-1.5 bi-box-arrow-up-right"></i>
+                        )}
+                    </a>
+                );
+            })}
         </div>
 
         <button class="h-9 flex sm:hidden rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
