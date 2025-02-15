@@ -44,12 +44,12 @@ const image = url + "/banner.webp";
 	<body class="bg-gradient-to-tr bg-fixed from-sky-600 to-cyan-600 text-white">
 		<Navbar />
 
-		<div id="all" class="transition-all duration-300">
+		<div id="all" class="transition-all duration-300 -translate-x-40 !-translate-x-0">
 			<slot />
+		</div>
 
-			<div id="top" class="cursor-pointer fixed w-11 h-11 bottom-2 right-2 rounded-full text-4xl bg-white flex items-center justify-center text-black shadow-md transition duration-300 translate-y-17">
-				<i class="bi-caret-up"></i>
-			</div>
+		<div id="top" class="cursor-pointer fixed w-11 h-11 bottom-2 right-2 rounded-full text-4xl bg-white flex items-center justify-center text-black shadow-md transition duration-300 translate-y-17">
+			<i class="bi-caret-up"></i>
 		</div>
 	</body>
 	
@@ -67,45 +67,5 @@ const image = url + "/banner.webp";
 				top?.classList.add("translate-y-17");
 			}
 		});
-	</script>
-
-	<script>
-		const submenu = document.getElementById("submenu");
-		const anchors = submenu!.querySelectorAll("a");
-		//const nav = document.querySelector("nav");
-		const all = document.getElementById("all");
-		const burger = document.getElementById("burger");
-
-		let isOpen = false;
-
-		burger!.onclick = () => {
-			if (isOpen) {
-				submenu?.classList.replace("translate-x-0", "translate-x-40");
-				all?.classList.remove("-translate-x-40");
-				document.body.classList.remove("overflow-hidden");
-				//nav?.classList.remove("-translate-x-40");
-
-				burger!.classList.remove("bg-gray-100", "text-black");
-				burger!.firstElementChild?.classList.replace("bi-x", "bi-list");
-
-				all!.onclick = null;
-
-				isOpen = false;
-			} else {
-				submenu?.classList.replace("translate-x-40", "translate-x-0");
-				all?.classList.add("-translate-x-40", "overflow-hidden");
-				document.body.classList.add("overflow-hidden");
-				//nav?.classList.add("-translate-x-40");
-
-				burger!.classList.add("bg-gray-100", "text-black");
-				burger!.firstElementChild?.classList.replace("bi-list", "bi-x");
-
-				all!.onclick = burger!.onclick;
-
-				isOpen = true;
-			}
-		}
-
-		anchors.forEach(anchor => anchor.onclick = burger!.onclick);
 	</script>
 </html>

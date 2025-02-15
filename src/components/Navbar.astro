@@ -32,7 +32,7 @@ import navs from '../data/nav-items.json';
     </div>
 </nav>
 
-<div id="submenu" class="fixed top-13 overflow-hidden border-2 border-r-0 border-dashed rounded-l-lg right-0 w-40 z-10 transition-all duration-300 translate-x-40 h-full">
+<div id="submenu" class="fixed top-13 overflow-hidden border-2 border-r-0 border-dashed rounded-l-lg right-0 w-40 z-10 transition-all duration-300 !translate-x-40 translate-x-0 h-full">
     <div class="w-full flex flex-col p-1 pr-0 gap-1">
         {navs.map(nav => {
             const isNavInternal = nav.url.startsWith("/");
@@ -52,3 +52,40 @@ import navs from '../data/nav-items.json';
         })}
     </div>
 </div>
+
+<script>
+    const submenu = document.getElementById("submenu");
+    const anchors = submenu!.querySelectorAll("a");
+    const all = document.getElementById("all");
+    const burger = document.getElementById("burger");
+
+    let isOpen = false;
+
+    burger!.onclick = () => {
+        // Change the state
+        isOpen = !isOpen;
+
+        // Show the submenu or hide
+        submenu?.classList.toggle("!translate-x-40", !isOpen);
+        // Move the body a little to the left
+        all?.classList.toggle("!-translate-x-0", !isOpen);
+        // Prevent scroll when submenu open
+        all?.classList.toggle("overflow-hidden", isOpen);
+        document.body.classList.toggle("overflow-hidden", isOpen);
+
+        // Change the burger background
+        burger!.classList.toggle("bg-gray-100", isOpen);
+        // The icon to black
+        burger!.classList.toggle("text-black", isOpen);
+        // Replace burger to x or vice versa
+        burger!.firstElementChild?.classList.replace(
+            isOpen ? "bi-list" : "bi-x",
+            isOpen ? "bi-x" : "bi-list"
+        );
+
+        // When the submenu open, the main can be clicked to close the submenu
+        all!.onclick = isOpen ? burger!.onclick : null;
+    }
+
+    anchors.forEach(anchor => anchor.onclick = burger!.onclick);
+</script>
