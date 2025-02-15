@@ -3,13 +3,13 @@ import navs from '../data/nav-items.json';
 ---
 
 <nav class="h-13 top-0 max-w-6xl mx-auto sm:px-4">
-    <div class="bg-gray-100 text-black flex items-center px-2 sm:px-3 w-full h-full rounded-b-lg">
+    <div class="bg-gray-100 text-black flex justify-between items-center px-2 sm:px-3 w-full h-full rounded-b-lg">
         <a href="/" class="font-bold h-9 flex rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
             <i class="bi-house-door text-2xl mr-1"></i>
             Home
         </a>
 
-        <div class="grow flex justify-end">
+        <div class="hidden sm:flex">
             {navs.map(nav => (
                 <a href={nav.url} class="font-bold h-9 flex rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
                     {nav.name}
@@ -20,5 +20,9 @@ import navs from '../data/nav-items.json';
                 </a>
             ))}
         </div>
+
+        <button class="h-9 flex sm:hidden rounded px-2 items-center transition duration-200 hover:bg-gray-300 active:bg-gray-300">
+            <i class="bi-list cursor-pointer text-2xl"></i>
+        </button>
     </div>
 </nav>
