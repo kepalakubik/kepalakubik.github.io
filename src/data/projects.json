@@ -1,4 +1,10 @@
 [{
+    "name": "Tomaka Book Club",
+    "description": "Website resmi Tomaka Book Club. Membaca itu menyenangkan!",
+    "repo": "https://github.com/kepalakubik/Tomaka",
+    "website": "https://tomakabookclub.id"
+},
+{
     "name": "Anigure",
     "description": "Sebuah konsep website marketplace online untuk berjualan action figure",
     "repo": "https://github.com/kepalakubik/Anigure",
