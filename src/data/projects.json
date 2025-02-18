@@ -5,12 +5,6 @@
     "website": "https://tomakabookclub.id"
 },
 {
-    "name": "Anigure",
-    "description": "Sebuah konsep website marketplace online untuk berjualan action figure",
-    "repo": "https://github.com/kepalakubik/Anigure",
-    "website": "https://kepalakubik.my.id/Anigure"
-},
-{
     "name": "PanicButton",
     "description": "Website panic button untuk mempermudah pencarian mahasiswa",
     "repo": "https://github.com/kepalakubik/PanicButton-UNM"
@@ -19,4 +13,10 @@
     "name": "InfoBoard",
     "description": "Papan jadwal digital untuk penggunaan instansi pemerintahan",
     "repo": "https://github.com/kepalakubik/InfoBoard"
+},
+{
+    "name": "Anigure",
+    "description": "Sebuah konsep website marketplace online untuk berjualan action figure",
+    "repo": "https://github.com/kepalakubik/Anigure",
+    "website": "https://kepalakubik.my.id/Anigure"
 }]
