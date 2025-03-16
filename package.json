@@ -1,7 +1,7 @@
 {
-  "name": "websiteku",
+  "name": "kepalakubik.github.io",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.2"
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.4.2",
+    "tailwindcss": "^4.0.14"
   }
 }
