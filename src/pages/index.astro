@@ -1,6 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout>
+    <header class="h-50 bg-[url(/pattern.svg)] bg-[auto_83px] overflow-hidden">
+    </header>
+
+    <main class="absolute w-full top-35 left-0 px-3">
+        <div class="max-w-7xl flex justify-between flex-col sm:flex-row mx-auto gap-3">
+            
+            <section class="space-y-2 px-4 py-7 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-sm flex flex-col items-center bg-white shadow-lg rounded-md">
+                <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
+
+                <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
+
+                <div class="leading-4 text-center text-sm opacity-70">
+                    a.k.a KepalaKubik
+                    <br>
+                    Fullstack Developer
+                </div>
+
+                
+            </section>
+
+            <section class="flex-1 p-4 bg-white shadow-lg rounded-md">
+                Test
+            </section>
+
+        </div>
+    </main>
 </Layout>
