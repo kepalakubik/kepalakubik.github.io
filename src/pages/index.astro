@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+
+import socmed from "../data/socmed.json";
 ---
 
 <Layout>
@@ -8,9 +10,9 @@ import { Image } from 'astro:assets';
     </header>
 
     <main class="absolute w-full top-35 left-0 px-3">
-        <div class="max-w-7xl flex justify-between flex-col sm:flex-row mx-auto gap-3">
+        <div class="max-w-7xl flex justify-between items-start flex-col sm:flex-row mx-auto gap-3">
             
-            <section class="space-y-2 px-4 py-7 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-sm flex flex-col items-center bg-white shadow-lg rounded-md">
+            <section class="space-y-2 px-4 pt-7 pb-4 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-sm flex flex-col items-center bg-white shadow-lg rounded-md">
                 <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
 
                 <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
@@ -21,7 +23,17 @@ import { Image } from 'astro:assets';
                     Fullstack Developer
                 </div>
 
-                
+                <!-- Sosial Media -->
+                <ul class="w-full opacity-70 mt-4">
+                    {socmed.map(data => (
+                        <li>
+                            <a href={data.url} class=" flex items-center py-1.5 group">
+                                <i class:list={[data.icon, "text-2xl mr-2"]}></i>
+                                <span class="group-hover:underline group-active:underline">{data.name}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </section>
 
             <section class="flex-1 p-4 bg-white shadow-lg rounded-md">

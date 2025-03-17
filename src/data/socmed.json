@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Facebook",
+        "icon": "fa-brands fa-facebook",
+        "url": ""
+    },
+    {
+        "name": "Instagram",
+        "icon": "fa-brands fa-instagram",
+        "url": ""
+    },
+    {
+        "name": "Bluesky",
+        "icon": "fa-brands fa-bluesky",
+        "url": ""
+    }
+]
