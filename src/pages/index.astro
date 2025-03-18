@@ -12,7 +12,7 @@ import socmed from "../data/socmed.json";
     <main class="absolute w-full top-35 left-0 px-3">
         <div class="max-w-7xl flex justify-between items-start flex-col sm:flex-row mx-auto gap-3">
             
-            <section class="space-y-2 px-4 pt-7 pb-4 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-sm flex flex-col items-center bg-white shadow-lg rounded-md">
+            <section class="space-y-2 px-4 pt-7 pb-4 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-xs flex flex-col items-center bg-white shadow-lg rounded-md">
                 <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
 
                 <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
@@ -27,7 +27,7 @@ import socmed from "../data/socmed.json";
                 <ul class="w-full opacity-70 mt-4">
                     {socmed.map(data => (
                         <li>
-                            <a href={data.url} class=" flex items-center py-1.5 group">
+                            <a href={data.url} class=" flex items-center py-1.5 group" target="_blank" rel="noopener noreferrer">
                                 <i class:list={[data.icon, "text-2xl mr-2"]}></i>
                                 <span class="group-hover:underline group-active:underline">{data.name}</span>
                             </a>
@@ -36,10 +36,18 @@ import socmed from "../data/socmed.json";
                 </ul>
             </section>
 
-            <section class="flex-1 p-4 bg-white shadow-lg rounded-md">
-                Test
-            </section>
-
+            <div class="flex-1">
+                <section class="section space-y-4">
+                    <h2 class="title">Tentang</h2>
+                    
+                    <p>
+                        Hey hay! Perkenalkan nama saya <b class="text-sky-800">Ryan Hidayat</b>,
+                        seorang programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik frontend maupun backend.
+                        <br>
+                        Saya
+                    </p>
+                </section>
+            </div>
         </div>
     </main>
 </Layout>

@@ -1,17 +1,22 @@
 [
     {
+        "name": "Github",
+        "icon": "fa-brands fa-github",
+        "url": "https://github.com/kepalakubik/"
+    },
+    {
         "name": "Facebook",
         "icon": "fa-brands fa-facebook",
-        "url": ""
+        "url": "https://web.facebook.com/profile.php?id=61572984081926"
     },
     {
         "name": "Instagram",
         "icon": "fa-brands fa-instagram",
-        "url": ""
+        "url": "https://www.instagram.com/kepalakubik/"
     },
     {
         "name": "Bluesky",
         "icon": "fa-brands fa-bluesky",
-        "url": ""
+        "url": "https://bsky.app/profile/kepalakubik.bsky.social"
     }
 ]
