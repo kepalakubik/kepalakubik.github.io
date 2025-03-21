@@ -1,11 +1,96 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import socmed from "../data/socmed.json";
+import projects from "../data/projects.json";
 ---
 
 <Layout>
-	<Welcome />
+    <header class="h-50 bg-[url(/pattern.svg)] bg-[auto_83px] overflow-hidden">
+    </header>
+
+    <main class="absolute w-full top-35 left-0 px-3">
+        <div class="max-w-7xl flex justify-between items-start flex-col sm:flex-row mx-auto gap-3">
+            
+            <section class="space-y-2 px-4 pt-7 pb-4 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-xs flex flex-col items-center bg-white shadow-lg rounded-md">
+                <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
+
+                <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
+
+                <div class="leading-4 text-center text-sm opacity-70">
+                    a.k.a KepalaKubik
+                    <br>
+                    Fullstack Developer
+                </div>
+
+                <!-- Sosial Media -->
+                <ul class="w-full opacity-70 mt-4">
+                    {socmed.map(data => (
+                        <li>
+                            <a href={data.url} class=" flex items-center py-1.5 group hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">
+                                <i class:list={[data.icon, "text-2xl mr-2"]}></i>
+                                <span class="group-hover:underline group-active:underline">{data.name}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <div class="flex-1 space-y-3 mb-3">
+                <section class="section space-y-4">
+                    <h2 class="title">Tentang</h2>
+                    
+                    <p>
+                        Hey hay! Kenalin saya <b class="text-sky-800">Ryan Hidayat</b>,
+                        seorang self-taught programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik frontend maupun backend.
+                        Saya sudah tertarik dengan dunia programming selama 7 tahun (and counting) karena... yah~ ngoding itu keren dan aku adalah orang yang keren.
+                        Walaupun AI sudah sangat pintar akhir-akhir ini, tapi saya percaya bahwa ini bukanlah ancaman untuk programmer karena kode itu bukan sekedar langsung ada tapi diketik menggunakan perasaan.
+                        <br><br>
+                        Selain programming, saya juga suka begadang. Kenapa?
+                        Karena malam adalah saat dimana suasana terasa tenang, tanpa adanya bunyi kendaraan diluar rumah, tanpa interupsi dari orang tua, yang membuatku bisa fokus saat sedang ngoding.
+                        Memang terdengar tidak sehat, tapi hey! Terkadang kita perlu sedikit berkorban demi kenyamanan.
+                    </p>
+                </section>
+
+                <section class="section space-y-4">
+                    <h1 class="title">Projects</h1>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        {projects.map(data => (
+                            <div class="shadow-sm rounded-sm p-2 space-y-3 h-full">
+                                <div class="flex items-center">
+                                    <div class="bg-sky-800 mr-2 w-5 h-5 rounded-sm overflow-hidden">
+                                        <!-- TODO -->
+                                    </div>
+
+                                    <h2 class="text-sky-800 line-clamp-1 font-bold text-lg">{data.name}</h2>
+                                </div>
+
+                                <p class="lg:line-clamp-2">
+                                    {data.description}
+                                </p>
+
+                                <div class="flex gap-x-2">
+                                    {data.repo && (
+                                        <a href={data.repo} class="underline hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">Repo</a>
+                                    )}
+
+                                    {data.repo && data.website && (<span>|</span>)}
+
+                                    {data.website && (
+                                        <a href={data.website} class="underline hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">Website</a>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <footer class="text-sm py-2 text-center">
+                </footer>
+                &copy; 2025 Ryan | MIT License
+            </div>
+        </div>
+    </main>
 </Layout>

@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "bootstrap-icons";
 @import "tailwindcss";
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.title {
+    @apply font-bold text-2xl text-sky-800 relative w-fit;
+}
+
+.title::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 w-full h-1 bg-[currentColor];
+}
+
+.section {
+    @apply p-4 bg-white shadow-lg rounded-md;
+}
