@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 
 import socmed from "../data/socmed.json";
 import projects from "../data/projects.json";
+import skills from "../data/skills.json";
 ---
 
 <Layout>
@@ -54,7 +55,22 @@ import projects from "../data/projects.json";
                 </section>
 
                 <section class="section space-y-4">
-                    <h1 class="title">Projects</h1>
+                    <h2 class="title">Keahlian</h2>
+
+                    {Object.entries(skills).map(([section, arr]) => (
+                        <div>
+                            <h3 class="text-lg font-bold text-sky-800">{section}:</h3>
+                            <div class="flex flex-wrap w-full text-4xl gap-2">
+                                {arr.map(data => (
+                                    <i class={data.icon} title={data.name}></i>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </section>
+
+                <section class="section space-y-4">
+                    <h2 class="title">Proyek</h2>
 
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {projects.map(data => (

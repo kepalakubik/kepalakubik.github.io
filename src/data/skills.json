@@ -1,0 +1,114 @@
+{
+    "Bahasa Pemrograman": [
+        {
+            "name": "Typescript",
+            "icon": "devicon-typescript-plain"
+        },
+        {
+            "name": "Javascript",
+            "icon": "devicon-javascript-plain"
+        },
+        {
+            "name": "C#",
+            "icon": "devicon-csharp-plain"
+        },
+        {
+            "name": "Java",
+            "icon": "devicon-java-plain"
+        },
+        {
+            "name": "PHP",
+            "icon": "devicon-php-plain"
+        },
+        {
+            "name": "Sass",
+            "icon": "devicon-sass-original"
+        },
+        {
+            "name": "CSS",
+            "icon": "devicon-css3-plain"
+        },
+        {
+            "name": "HTML5",
+            "icon": "devicon-html5-plain"
+        }
+    ],
+
+    "Kerangka Kerja": [
+        {
+            "name": "Electron",
+            "icon": "devicon-electron-original"
+        },
+        {
+            "name": "Tauri",
+            "icon": "devicon-tauri-plain"
+        },
+        {
+            "name": "Webpack",
+            "icon": "devicon-webpack-plain"
+        },
+        {
+            "name": "Express.JS",
+            "icon": "devicon-express-original"
+        },
+        {
+            "name": "Astro.JS",
+            "icon": "devicon-astro-plain"
+        },
+        {
+            "name": "11ty",
+            "icon": "devicon-eleventy-plain"
+        },
+        {
+            "name": "React",
+            "icon": "devicon-react-original"
+        },
+        {
+            "name": "jQuery",
+            "icon": "devicon-jquery-plain"
+        },
+        {
+            "name": "Bootstrap",
+            "icon": "devicon-bootstrap-plain"
+        },
+        {
+            "name": "Tailwind",
+            "icon": "devicon-tailwindcss-original"
+        }
+    ],
+
+    "Alat-Alat": [
+        {
+            "name": "Linux",
+            "icon": "devicon-linux-plain"
+        },
+        {
+            "name": "Android Studio",
+            "icon": "devicon-androidstudio-plain"
+        },
+        {
+            "name": "Git",
+            "icon": "devicon-git-plain"
+        },
+        {
+            "name": "Bun",
+            "icon": "devicon-bun-plain"
+        },
+        {
+            "name": "Deno",
+            "icon": "devicon-denojs-original"
+        },
+        {
+            "name": "Node.JS",
+            "icon": "devicon-nodejs-plain-wordmark"
+        },
+        {
+            "name": "SQLite",
+            "icon": "devicon-sqlite-plain"
+        },
+        {
+            "name": "MySQL",
+            "icon": "devicon-mysql-original"
+        }
+    ]
+}
