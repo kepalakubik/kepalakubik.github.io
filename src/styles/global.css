@@ -7,12 +7,12 @@ body {
 }
 
 .title {
-    @apply font-bold text-3xl text-sky-800 relative w-fit;
+    @apply font-bold text-2xl text-sky-800 relative w-fit;
 }
 
 .title::after {
     content: "";
-    @apply absolute -bottom-1.5 left-0 w-full h-1 bg-[currentColor];
+    @apply absolute -bottom-1 left-0 w-full h-1 bg-[currentColor];
 }
 
 .section {

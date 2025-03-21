@@ -18,5 +18,10 @@
         "name": "Bluesky",
         "icon": "fa-brands fa-bluesky",
         "url": "https://bsky.app/profile/kepalakubik.bsky.social"
+    },
+    {
+        "name": "Trakteer",
+        "icon": "fa-solid fa-hand-holding-dollar",
+        "url": "https://trakteer.id/kepalakubik/tip"
     }
 ]

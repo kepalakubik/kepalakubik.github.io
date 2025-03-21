@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
 import socmed from "../data/socmed.json";
+import projects from "../data/projects.json";
 ---
 
 <Layout>
@@ -27,7 +28,7 @@ import socmed from "../data/socmed.json";
                 <ul class="w-full opacity-70 mt-4">
                     {socmed.map(data => (
                         <li>
-                            <a href={data.url} class=" flex items-center py-1.5 group" target="_blank" rel="noopener noreferrer">
+                            <a href={data.url} class=" flex items-center py-1.5 group hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">
                                 <i class:list={[data.icon, "text-2xl mr-2"]}></i>
                                 <span class="group-hover:underline group-active:underline">{data.name}</span>
                             </a>
@@ -36,17 +37,59 @@ import socmed from "../data/socmed.json";
                 </ul>
             </section>
 
-            <div class="flex-1">
+            <div class="flex-1 space-y-3 mb-3">
                 <section class="section space-y-4">
                     <h2 class="title">Tentang</h2>
                     
                     <p>
-                        Hey hay! Perkenalkan nama saya <b class="text-sky-800">Ryan Hidayat</b>,
-                        seorang programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik frontend maupun backend.
-                        <br>
-                        Saya
+                        Hey hay! Kenalin saya <b class="text-sky-800">Ryan Hidayat</b>,
+                        seorang self-taught programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik frontend maupun backend.
+                        Saya sudah tertarik dengan dunia programming selama 7 tahun (and counting) karena... yah~ ngoding itu keren dan aku adalah orang yang keren.
+                        Walaupun AI sudah sangat pintar akhir-akhir ini, tapi saya percaya bahwa ini bukanlah ancaman untuk programmer karena kode itu bukan sekedar langsung ada tapi diketik menggunakan perasaan.
+                        <br><br>
+                        Selain programming, saya juga suka begadang. Kenapa?
+                        Karena malam adalah saat dimana suasana terasa tenang, tanpa adanya bunyi kendaraan diluar rumah, tanpa interupsi dari orang tua, yang membuatku bisa fokus saat sedang ngoding.
+                        Memang terdengar tidak sehat, tapi hey! Terkadang kita perlu sedikit berkorban demi kenyamanan.
                     </p>
                 </section>
+
+                <section class="section space-y-4">
+                    <h1 class="title">Projects</h1>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        {projects.map(data => (
+                            <div class="shadow-sm rounded-sm p-2 space-y-3 h-full">
+                                <div class="flex items-center">
+                                    <div class="bg-sky-800 mr-2 w-5 h-5 rounded-sm overflow-hidden">
+                                        <!-- TODO -->
+                                    </div>
+
+                                    <h2 class="text-sky-800 line-clamp-1 font-bold text-lg">{data.name}</h2>
+                                </div>
+
+                                <p class="lg:line-clamp-2">
+                                    {data.description}
+                                </p>
+
+                                <div class="flex gap-x-2">
+                                    {data.repo && (
+                                        <a href={data.repo} class="underline hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">Repo</a>
+                                    )}
+
+                                    {data.repo && data.website && (<span>|</span>)}
+
+                                    {data.website && (
+                                        <a href={data.website} class="underline hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">Website</a>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <footer class="text-sm py-2 text-center">
+                    &copy; 2025 Ryan | MIT License
+                </footer>
             </div>
         </div>
     </main>
