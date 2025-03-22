@@ -59,7 +59,7 @@ import skills from "../data/skills.json";
 
                     {Object.entries(skills).map(([section, arr]) => (
                         <div>
-                            <h3 class="text-lg font-bold text-sky-800">{section}:</h3>
+                            <h3 class="text-lg font-bold">{section}:</h3>
                             <div class="flex flex-wrap w-full text-4xl gap-2">
                                 {arr.map(data => (
                                     <i class={data.icon} title={data.name}></i>
