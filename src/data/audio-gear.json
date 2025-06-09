@@ -1,0 +1,26 @@
+[
+    {
+        "name": "KZ Castor (Bass var)",
+        "type": "In-Ear Monitor",
+        "icon": "fa-solid fa-ear-listen",
+        "description": "Ber-tuning Harman dengan bass yang lebih menonjol. Cocok buat denger musik EDM atau bass-heavy."
+    },
+    {
+        "name": "Moondrop Space Travel",
+        "type": "True Wireless Stereo",
+        "icon": "fa-solid fa-headphones",
+        "description": "TWS budget-friendly dengan kualitas suara yang lumayan baik. Ada ANC dan 3 pilihan tuning di Moondrop Link."
+    },
+    {
+        "name": "JCALLY JM6 Pro",
+        "type": "Digital Audio Converter & Amplifier",
+        "icon": "fa-solid fa-wave-square",
+        "description": "DAC dan AMP menyatu menjadi sebuah dongle portable. Harga merakyat, kualitas menyala (kecuali kabelnya)."
+    },
+    {
+        "name": "HP/Laptop :b",
+        "type": "Digital Audio Player",
+        "icon": "fa-solid fa-compact-disc",
+        "description": "Gak ada budget, jadi cuma pake HP dan laptop aja. Bismillah bisa beli FiiO JM21."
+    }
+]

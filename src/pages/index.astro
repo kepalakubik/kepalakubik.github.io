@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import socmed from "../data/socmed.json";
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
+import audioGear from "../data/audio-gear.json";
 ---
 
 <Layout>
@@ -22,7 +23,7 @@ import skills from "../data/skills.json";
                 <div class="leading-4 text-center text-sm opacity-70">
                     a.k.a KepalaKubik
                     <br>
-                    Fullstack Developer
+                    Programmer & Casual Audiophile
                 </div>
 
                 <!-- Sosial Media -->
@@ -43,14 +44,11 @@ import skills from "../data/skills.json";
                     <h2 class="title">Tentang</h2>
                     
                     <p>
-                        Hey hay! Kenalin saya <b class="text-sky-800">Ryan Hidayat</b>,
-                        seorang self-taught programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik frontend maupun backend.
-                        Saya sudah tertarik dengan dunia programming selama 7 tahun (and counting) karena... yah~ ngoding itu keren dan aku adalah orang yang keren.
-                        Walaupun AI sudah sangat pintar akhir-akhir ini, tapi saya percaya bahwa ini bukanlah ancaman untuk programmer karena kode itu bukan sekedar langsung ada tapi diketik menggunakan perasaan.
-                        <br><br>
-                        Selain programming, saya juga suka begadang. Kenapa?
-                        Karena malam adalah saat dimana suasana terasa tenang, tanpa adanya bunyi kendaraan diluar rumah, tanpa interupsi dari orang tua, yang membuatku bisa fokus saat sedang ngoding.
-                        Memang terdengar tidak sehat, tapi hey! Terkadang kita perlu sedikit berkorban demi kenyamanan.
+                        Halo! Perkenalkan saya <b class="text-sky-800">Ryan Hidayat</b>.
+                        <br>
+                        Programmer asal Sulawesi Barat yang berfokus pada pengembangan website, baik backend maupun frontend.
+                        <br>
+                        Selain programming, saya juga seorang fotografer, audiophile kasual, dan pegiat literasi.
                     </p>
                 </section>
 
@@ -98,6 +96,31 @@ import skills from "../data/skills.json";
                                         <a href={data.website} class="underline hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">Website</a>
                                     )}
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section class="section space-y-4">
+                    <h2 class="title">Audio Gear</h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        {audioGear.map(data => (
+                            <div class="shadow-sm rounded-sm p-2 space-y-3 h-full">
+                                <div class="flex items-center">
+                                    <div class="bg-sky-800 mr-2 w-5 h-5 rounded-sm overflow-hidden flex justify-center items-center">
+                                        <i class:list={[data.icon, "text-white"]}></i>
+                                    </div>
+
+                                    <div>
+                                        <h2 class="text-sky-800 line-clamp-1 font-bold text-lg leading-none">{data.name}</h2>
+                                        <div class="opacity-50 leading-none text-xs">{data.type}</div>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    {data.description}
+                                </p>
                             </div>
                         ))}
                     </div>
