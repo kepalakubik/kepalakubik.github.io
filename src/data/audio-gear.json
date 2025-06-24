@@ -1,21 +1,21 @@
 [
     {
-        "name": "KZ Castor (Bass var)",
+        "name": "Moondrop Chu II",
         "type": "In-Ear Monitor",
         "icon": "fa-solid fa-ear-listen",
-        "description": "Ber-tuning Harman dengan bass yang lebih menonjol. Cocok buat denger musik EDM atau bass-heavy."
+        "description": "IEM dengan tuning neutral-bright yang cocok untuk berbagai genre musik. Harga kaki lima, kualitas bintang lima."
     },
     {
-        "name": "Moondrop Space Travel",
+        "name": "Realme Buds Air 6",
         "type": "True Wireless Stereo",
         "icon": "fa-solid fa-headphones",
-        "description": "TWS budget-friendly dengan kualitas suara yang lumayan baik. Ada ANC dan 3 pilihan tuning di Moondrop Link."
+        "description": "TWS dari produsen elektronik konsumer, Realme. Kualitas suara lumayan bagus tapi bukan audiophile-grade."
     },
     {
         "name": "JCALLY JM6 Pro",
         "type": "Digital Audio Converter & Amplifier",
         "icon": "fa-solid fa-wave-square",
-        "description": "DAC dan AMP menyatu menjadi sebuah dongle portable. Harga merakyat, kualitas menyala (kecuali kabelnya)."
+        "description": "DAC dan Amplifier menyatu menjadi sebuah dongle portable. Udah support DSD256 dan PCM sampai 32-bit/384kHz."
     },
     {
         "name": "HP/Laptop :b",
