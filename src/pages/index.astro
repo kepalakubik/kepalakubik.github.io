@@ -6,6 +6,7 @@ import socmed from "../data/socmed.json";
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
 import audioGear from "../data/audio-gear.json";
+import external from "../data/external.json";
 ---
 
 <Layout>
@@ -15,29 +16,44 @@ import audioGear from "../data/audio-gear.json";
     <main class="absolute w-full top-35 left-0 px-3">
         <div class="max-w-7xl flex justify-between items-start flex-col sm:flex-row mx-auto gap-3">
             
-            <section class="space-y-2 px-4 pt-7 pb-4 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-xs flex flex-col items-center bg-white shadow-lg rounded-md">
-                <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
+            <div class="space-y-3 w-full sm:max-w-3xs md:max-w-2xs lg:max-w-xs">
+                <section class="space-y-2 px-4 pt-7 pb-4 flex flex-col items-center bg-white shadow-lg rounded-md">
+                    <Image class="rounded-md" src="/favicon.svg" width="120" height="120" alt="Ryan" loading="eager" />
 
-                <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
+                    <h1 class="text-sky-800 font-bold text-xl">Ryan</h1>
 
-                <div class="leading-4 text-center text-sm opacity-70">
-                    a.k.a KepalaKubik
-                    <br>
-                    Programmer & Casual Audiophile
-                </div>
+                    <div class="leading-4 text-center text-sm opacity-70">
+                        a.k.a KepalaKubik
+                        <br>
+                        Programmer & Casual Audiophile
+                    </div>
 
-                <!-- Sosial Media -->
-                <ul class="w-full opacity-70 mt-4">
-                    {socmed.map(data => (
-                        <li>
-                            <a href={data.url} class=" flex items-center py-1.5 group hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">
-                                <i class:list={[data.icon, "text-2xl mr-2"]}></i>
-                                <span class="group-hover:underline group-active:underline">{data.name}</span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </section>
+                    <!-- Sosial Media -->
+                    <ul class="w-full opacity-70 mt-4">
+                        {socmed.map(data => (
+                            <li>
+                                <a href={data.url} class=" flex items-center py-1.5 group hover:text-sky-800 active:text-sky-800" target="_blank" rel="noopener noreferrer">
+                                    <i class:list={[data.icon, "text-2xl mr-2"]}></i>
+                                    <span class="group-hover:underline group-active:underline">{data.name}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                <section class="bg-white p-4 shadow-lg rounded-md">
+                    <ul class="w-full opacity-70">
+                        {external.map(data => (
+                            <li>
+                                <a class="flex items-center py-1.5 group hover:text-sky-800 active:text-sky-800" href={data.link}>
+                                    <i class:list={[data.icon, "text-2xl mr-2"]}></i>
+                                    <span class="group-hover:underline group-active:underline">{data.name}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            </div>
 
             <div class="flex-1 space-y-3 mb-3">
                 <section class="section space-y-4">

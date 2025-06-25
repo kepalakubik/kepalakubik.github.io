@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Audio Review",
+        "link": "/audio-review/",
+        "icon": "fa-solid fa-headphones-simple"
+    },
+    {
+        "name": "Blog",
+        "link": "/blog/",
+        "icon": "fa-solid fa-pencil"
+    }
+]
