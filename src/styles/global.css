@@ -3,6 +3,10 @@
 @import "bootstrap-icons";
 @import "tailwindcss";
 
+@theme {
+    --color-primary: #02a6f2;
+}
+
 body {
     font-family: "Roboto", sans-serif;
 }
