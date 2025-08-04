@@ -1,23 +1,54 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const description = "Karena headset konter tidak membuatmu menikmati musik seperti yang seharusnya";
+
+const posts = await getCollection("audioReview");
 ---
 
-<Layout title="Audio Review | KepalaKubik">
+<Layout title="Audio Review | KepalaKubik" description={description}>
     <header class="text-white h-50 bg-primary bg-[auto_83px] overflow-hidden">
         <div class="p-2 flex text-center flex-col justify-center items-center relative w-full h-full max-w-7xl mx-auto">
             <a href=".." aria-label="Kembali">
                 <i class="fa-solid fa-arrow-left text-3xl absolute left-2 top-1"></i>
             </a>
 
-            <h1 class="uppercase text-3xl sm:text-4xl font-bold">
+            <h1 class="uppercase text-2xl sm:text-4xl font-bold">
                 <i class="fa-solid fa-headphones-simple mr-3"></i>Audio Review
             </h1>
-            <span class="mt-1 leading-tight sm:text-lg">Karena headset konter tidak membuatmu <br class="hidden sm:block">menikmati musik seperti yang seharusnya.</span>
+            <span class="mt-1 leading-tight">Karena headset konter tidak membuatmu <br class="hidden sm:block">menikmati musik seperti yang seharusnya</span>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-3 pt-4">
-        <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {posts.map(post => (
+                <a class="shadow-sm rounded-sm h-full overflow-hidden cursor-pointer group" href={`/audio-review/${post.id}`}>
+                    <img class="object-cover object-center h-40 sm:h-50" src={post.data.thumbnail} alt="Thumbnail" width="100%" />
+
+                    <!-- Information -->
+                    <div class="p-2 space-y-3">
+                        <!-- Type -->
+                        <div class="bg-primary text-xs text-white px-1.5 py-1 rounded-sm w-fit">#{post.data.type}</div>
+
+                        <!-- Title -->
+                        <h2 class="mb-2 text-xl sm:text-2xl font-bold line-clamp-2 text-sky-800 group-active:underline group-hover:underline">{post.data.title}</h2>
+                        
+                        <!-- Etc -->
+                        <div>
+                            <span class="text-gray-500 text-xs">
+                                <i class="fa-solid fa-calendar mr-1"></i>{post.data.pubDate.toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" })}
+                                
+                                <span class="mx-1">&#x2022;</span>
+
+                                <i class="fa-solid fa-tags mr-0.5"></i>
+                                {post.data.tags.join(", ")}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            ))}
 
         </div>
     </main>
