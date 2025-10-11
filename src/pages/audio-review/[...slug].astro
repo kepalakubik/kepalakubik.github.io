@@ -1,9 +1,10 @@
 ---
+import Layout from "../../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const posts = await getCollection("audioReview");
-    return posts.map((post: any) => ({
+    return posts.map((post) => ({
         params: { slug: post.id }, props: { post },
     }));
 }
@@ -12,4 +13,22 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Content />
+<Layout title={post.data.title} image={post.data.thumbnail}>
+    <header class="text-white h-60 relative overflow-hidden bg-cover" style={`background-image: url(${post.data.thumbnail});`}>
+        <div class="absolute inset-0 bg-primary/80">
+
+        </div>
+
+        <div class="p-2 flex text-center flex-col justify-center items-center relative w-full h-full max-w-7xl mx-auto">
+            <a href="/audio-review/" aria-label="Kembali">
+                <i class="fa-solid fa-arrow-left text-3xl absolute left-2 top-1"></i>
+            </a>
+
+            <h1 class="uppercase text-2xl sm:text-4xl font-bold max-w-2xl">
+                Review {post.data.title}
+            </h1>
+        </div>
+    </header>
+
+    <Content />
+</Layout>

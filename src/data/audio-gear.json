@@ -6,10 +6,10 @@
         "description": "IEM dengan tuning neutral-bright yang cocok untuk berbagai genre musik. Harga kaki lima, kualitas bintang lima."
     },
     {
-        "name": "Realme Buds Air 6",
+        "name": "KZ Carol Pro",
         "type": "True Wireless Stereo",
         "icon": "fa-solid fa-headphones",
-        "description": "TWS dari produsen elektronik konsumer, Realme. Kualitas suara lumayan bagus tapi bukan audiophile-grade."
+        "description": "TWS terbaru dari KZ. Punya kualitas suara yang sangat bagus dan fun dengan harga murah."
     },
     {
         "name": "JCALLY JM6 Pro",
@@ -21,6 +21,6 @@
         "name": "HP/Laptop :b",
         "type": "Digital Audio Player",
         "icon": "fa-solid fa-compact-disc",
-        "description": "Gak ada budget, jadi cuma pake HP dan laptop aja. Bismillah bisa beli FiiO JM21."
+        "description": "Gak ada budget, jadi cuma pake HP dan laptop aja. Bismillah bisa beli FiiO Snowsky Echo Mini."
     }
 ]

@@ -5,6 +5,10 @@ import { getCollection } from "astro:content";
 const description = "Karena headset konter tidak membuatmu menikmati musik seperti yang seharusnya";
 
 const posts = await getCollection("audioReview");
+const bulan = [
+    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+];
 ---
 
 <Layout title="Audio Review | KepalaKubik" description={description}>
@@ -21,21 +25,37 @@ const posts = await getCollection("audioReview");
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-3 pt-4">
+    <main class="max-w-7xl mx-auto px-3 py-4 grid grid-cols-2 gap-3">
+        {posts.map(post => (
+            <div class="pl-2 border-l-4 border-primary flex">
+                <div class="flex flex-col text-center mr-4">
+                    <div class="text-primary text-5xl font-bold">{post.data.pubDate.getDate()}</div>
+                    <span class="text-primary leading-4.5">{bulan[post.data.pubDate.getMonth()]}<br>{post.data.pubDate.getFullYear()}</span>
+                </div>
+
+                <div class="flex-1">
+                    Test
+                </div>
+            </div>
+        ))}
+    </main>
+
+    <!--
+    <main class="max-w-7xl mx-auto px-3 py-4 flex flex-col-reverse sm:flex-row items-start gap-3">
+        <div class="sm:max-w-3xs md:max-w-2xs lg:max-w-xs w-full bg-white shadow-lg rounded-md p-4">
+
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {posts.map(post => (
-                <a class="shadow-sm rounded-sm h-full overflow-hidden cursor-pointer group" href={`/audio-review/${post.id}`}>
+                <a class="shadow-sm rounded-sm h-full overflow-hidden cursor-pointer group" href={`/audio-review/${post.id}/`}>
                     <img class="object-cover object-center h-40 sm:h-50" src={post.data.thumbnail} alt="Thumbnail" width="100%" />
 
-                    <!-- Information -->
                     <div class="p-2 space-y-3">
-                        <!-- Type -->
                         <div class="bg-primary text-xs text-white px-1.5 py-1 rounded-sm w-fit">#{post.data.type}</div>
 
-                        <!-- Title -->
                         <h2 class="mb-2 text-xl sm:text-2xl font-bold line-clamp-2 text-sky-800 group-active:underline group-hover:underline">{post.data.title}</h2>
                         
-                        <!-- Etc -->
                         <div>
                             <span class="text-gray-500 text-xs">
                                 <i class="fa-solid fa-calendar mr-1"></i>{post.data.pubDate.toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" })}
@@ -49,7 +69,7 @@ const posts = await getCollection("audioReview");
                     </div>
                 </a>
             ))}
-
         </div>
     </main>
+    -->
 </Layout>
