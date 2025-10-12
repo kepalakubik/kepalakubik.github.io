@@ -2,7 +2,6 @@
 title: Kenalan dengan wajah baru website pribadi ini
 published: 2025-10-12
 description: "Bukan bikinan sendiri sih, btw."
-image: "./cover.jpeg"
 tags: ["Random"]
 category: Blog
 draft: false

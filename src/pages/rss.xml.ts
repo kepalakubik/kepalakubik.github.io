@@ -20,9 +20,9 @@ export async function GET(context: APIContext) {
 	const blog = await getSortedPosts();
 
 	return rss({
-		title: siteConfig.title,
-		description: siteConfig.subtitle || "No description",
-		site: context.site ?? "https://fuwari.vercel.app",
+		title: `${siteConfig.title} | ${siteConfig.subtitle}`,
+		description: siteConfig.description || "No description",
+		site: context.site ?? "https://kepalakubik.my.id",
 		items: blog.map((post) => {
 			const content =
 				typeof post.body === "string" ? post.body : String(post.body || "");
