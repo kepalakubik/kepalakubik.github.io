@@ -1,5 +1,5 @@
 ---
-title: Kenalan dengan wajah baru website pribadi ini
+title: Kenalan dengan wajah baru website ini
 published: 2025-10-12
 description: "Bukan bikinan sendiri sih, btw."
 tags: ["Random"]
@@ -7,12 +7,29 @@ category: Blog
 draft: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lorem ut odio egestas dictum sit amet sit amet libero. Cras id fermentum sem. Quisque cursus sapien metus, eget imperdiet leo dignissim sit amet. Duis arcu ex, convallis sed volutpat consequat, sodales vitae risus. Quisque justo augue, faucibus ut pharetra sed, ullamcorper nec nunc. Etiam nec pellentesque velit. Quisque dignissim vehicula felis vitae varius. Nam mauris ipsum, porttitor non auctor vel, imperdiet in dui. Donec non lectus quam. Cras commodo, sapien eget fringilla scelerisque, turpis ligula aliquet eros, vitae tempor lorem eros quis felis. Quisque consequat semper eros laoreet aliquet. Duis id pulvinar urna. Suspendisse dapibus condimentum tellus, in efficitur orci pretium luctus. Integer lacinia mauris eget libero vehicula, eget porttitor neque ultricies.
+Yuhu! Selamat pagi, siang, sore, atau malam. 👋 \
+Terserah lah berdasarkan sekarang dah jam berapa kamu membaca tulisan ini.
 
-Nam at libero eget diam malesuada convallis. Praesent ut eros et nunc commodo viverra non eu magna. Fusce rutrum scelerisque magna sed tincidunt. Quisque egestas tincidunt nulla ac consequat. Donec tristique ultricies erat consequat accumsan. Aliquam id tellus libero. Aenean facilisis mauris id sagittis viverra.
+So... selamat datang di website baru ku. Karena suatu alasan, aku tidak membuat website pribadi ku lagi dari scratch karena,
+welp, malas banget. 🧢 \
+Aku berakhir menggunakan sebuah template website bernama...
 
-Proin ligula elit, sollicitudin eu efficitur quis, accumsan sed ex. In gravida sit amet ante eget tincidunt. Etiam mollis at libero quis tristique. Donec aliquam luctus libero, sed venenatis ligula tincidunt vel. Integer interdum odio sed varius eleifend. Ut luctus ligula vitae metus gravida, ac dapibus mi convallis. Sed gravida, arcu at condimentum faucibus, est lacus scelerisque nunc, eu placerat purus elit nec magna. Nunc mattis congue volutpat. Vivamus scelerisque libero quis erat aliquet fermentum. Praesent pulvinar tincidunt neque commodo finibus. Nam ut tellus sed sapien hendrerit ultricies ac vitae nunc. Phasellus tellus velit, iaculis vitae finibus ut, eleifend eget lectus. Duis ornare, elit vitae blandit posuere, est odio lobortis arcu, sit amet ullamcorper sem ipsum vitae ex. Integer ac laoreet ante. Mauris venenatis faucibus odio vel molestie.
+::github{repo="saicaca/fuwari"}
 
-Pellentesque fermentum scelerisque porttitor. Vestibulum nec enim at orci tristique tempus at sit amet nibh. Integer quis nulla eget dolor tincidunt tristique non non turpis. Nulla justo nunc, finibus vel tempor sit amet, volutpat vel velit. Nullam gravida ultrices nulla nec lobortis. Phasellus tincidunt quam varius ipsum consequat fringilla. Suspendisse eleifend leo sit amet blandit interdum. Vivamus pulvinar ex fringilla, venenatis velit in, pharetra diam. Aliquam a dolor sit amet leo ornare pellentesque lacinia vel lectus. Vivamus iaculis nibh ac leo imperdiet, nec accumsan dolor pulvinar. Nullam lacinia imperdiet tellus, eu vulputate mi vulputate vel. Nullam tincidunt, orci non interdum blandit, felis nisi finibus felis, lobortis fringilla nibh arcu sit amet ipsum. Nullam consectetur, risus et rutrum rutrum, quam sapien egestas leo, sed ullamcorper nibh leo et dolor. Nam sollicitudin rutrum ullamcorper. Aenean ornare feugiat lectus, vel luctus justo ultricies ac. In a molestie augue.
+Kenapa <span style="color: var(--primary)">Fuwari</span>? Jadi gini ceritanya. \
+Beberapa bulan yang lalu, aku melihat salah satu website teman ku bernama [Vithaya](https://danifernando.com/), yang dimana menurutku... wah, nih website minimalis + clean banget. Nah situ aku terinsipirasi buat bikin website pribadi yang (setidaknya)
+mirip dengan website temanku. Seperti kebanyakan programmer amatiran lainnya, aku langsung `git push origin --force` ke
+repo website ku dan memulai dari awal. Seperti biasa, aku menggunakan Astro dan Tailwind sebagai basis website ku.
 
-Phasellus pretium ex ipsum, eu pretium felis molestie at. Aliquam sed hendrerit sapien, vel posuere quam. Curabitur maximus felis metus, et suscipit urna porttitor commodo. Donec aliquam magna nec sapien tempor bibendum. In pharetra, sem non venenatis aliquet, lorem leo posuere magna, ac tempus augue lorem in tortor. Pellentesque odio neque, volutpat eu ante a, luctus malesuada ante. Maecenas id pellentesque arcu. Quisque viverra dictum nulla. Vestibulum vel eleifend magna. Praesent posuere metus a justo feugiat, eu eleifend metus mollis. Ut tempor scelerisque facilisis. Etiam congue auctor lectus, in aliquet ex imperdiet non. Nullam sed posuere metus. Morbi eu ex diam.
+Setelah berbulan bulan ngoding (lama karena malas 🧢), aku masih tidak puas dengan hasilnya. _I mean, it's not that bad but i
+want more_. Saking tidak puasnya, aku sampai malas total buat lanjutinnya. Beberapa hari kemudian saat ngescroll beranda
+Github ku, aku melihat Github temanku (Vithaya) memberikan star pada sebuah repo. Karena penasaran, aku buka repo itu dan melihat
+README nya. Eh pas pertama kalu lihat screenshotnya, aku langsung mikir "Loh ini kan... mirip websitenya Vithaya. Jadi ini toh template nya...".
+
+Karena akhirnya aku menemukan template website yang aku cari selama ini, aku langsung [mengarsipkan](https://github.com/kepalakubik/kepalakubik.github.io/tree/archived) website lama ku dan, welp, here we are. (Untuk saat ini) Aku berakhir menggunakan `Fuwari` sebagai website pribadi ku dengan sedikit modifikasi untuk memenuhi keinginan desain ku.
+
+Yah begitulah sejarahnya. Mungkin kalian harus coba pakai template website ini deh kalau kalian orangnya malasan kayak member
+IMPHNEN. Tinggal fork, modif dikit, selesai! Kesulitan yang aku dapat dari template ini paling cuman gak ada 404 dan
+standar desain nya, tapi eh, whatever.
+
+Mungkin cuman itu dari saya. Sampai jumpa di tulisan ku berikutnya dan tetaplah bernafas.
