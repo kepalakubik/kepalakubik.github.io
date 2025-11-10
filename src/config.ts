@@ -87,6 +87,11 @@ export const profileConfig: ProfileConfig = {
 			url: "https://bsky.app/profile/kepalakubik.my.id",
 		},
 		{
+			name: "LinkedIn",
+			icon: "fa6-brands:linkedin",
+			url: "https://www.linkedin.com/in/kepalakubik/",
+		},
+		{
 			name: "Trakteer",
 			icon: "fa6-solid:heart",
 			url: "https://trakteer.id/kepalakubik/tip",
@@ -97,7 +102,7 @@ export const profileConfig: ProfileConfig = {
 export const licenseConfig: LicenseConfig = {
 	enable: true,
 	name: "CC BY 4.0",
-	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+	url: "https://creativecommons.org/licenses/by/4.0/",
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {

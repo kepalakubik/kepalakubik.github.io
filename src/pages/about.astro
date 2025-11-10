@@ -1,25 +1,134 @@
 ---
-
-import { getEntry, render } from "astro:content";
-import Markdown from "@components/misc/Markdown.astro";
+import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
-
-const aboutPost = await getEntry("spec", "about");
-
-if (!aboutPost) {
-	throw new Error("About page content not found");
-}
-
-const { Content } = await render(aboutPost);
 ---
 <MainGridLayout title={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+    <div class="flex flex-col gap-y-4 w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content />
-            </Markdown>
+            <section class="prose dark:prose-invert prose-base !max-w-none custom-md">
+                <h1 id="tentang">
+                    🪪 Tentang
+                    <a class="anchor" href="#tentang">
+                        <span class="anchor-icon" data-pagefind-ignore="">#</span>
+                    </a>
+                </h1>
+
+                <p>
+                    Yuhu! Kenalin saya <a href="https://classified.kepalakubik.my.id" target="_blank" rel="noopener noreferrer">Ryan Hidayat</a> 👋.
+                    <br>
+                    Seorang programmer asal Sulawesi Barat dengan fokus pada pengembangan website, baik backend maupun frontend. <br>
+                    Selain programming, saya juga seorang fotografer, audiophile kasual, dan pegiat literasi.
+                </p>
+            </section>
+        </div>
+
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <section class="prose dark:prose-invert prose-base !max-w-none custom-md">
+                <h1 id="keahlian">
+                    🧑‍💻 Keahlian
+                    <a class="anchor" href="#keahlian">
+                        <span class="anchor-icon" data-pagefind-ignore="">#</span>
+                    </a>
+                </h1>
+
+                <h3>
+                    Bahasa Pemrograman:
+                </h3>
+                <span class="flex flex-wrap gap-2">
+                    <Icon name="skill-icons:typescript" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:javascript" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:cs" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:java-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:php-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:sass" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:css" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:html" class="text-[2.8rem]"></Icon>
+                </span>
+
+                <h3>
+                    Kerangka Kerja:
+                </h3>
+                <p class="flex flex-wrap gap-2">
+                    <Icon name="skill-icons:tauri-dark" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:webpack-dark" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:expressjs-dark" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:jquery" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:bootstrap" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:astro" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:electron" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:react-dark" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:tailwindcss-dark" class="text-[2.8rem]"></Icon>
+                </p>
+
+                <h3>
+                    Alat-Alat:
+                </h3>
+                <p class="flex flex-wrap gap-2">
+                    <Icon name="skill-icons:linux-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:git" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:androidstudio-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:sqlite" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:bun-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:nodejs-dark" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:deno-light" class="text-[2.8rem]"></Icon>
+                    <Icon name="skill-icons:mysql-light" class="text-[2.8rem]"></Icon>
+                </p>
+            </section>
+        </div>
+
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <section class="prose dark:prose-invert prose-base !max-w-none custom-md">
+                <h1 id="audio-gear">
+                    🎧 Audio Gear
+                    <a class="anchor" href="#audio-gear">
+                        <span class="anchor-icon" data-pagefind-ignore="">#</span>
+                    </a>
+                </h1>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
+                    <div class="flex flex-nowrap items-stretch h-24 gap-4 rounded-[var(--radius-large)]">
+                        <div class="w-24 h-24 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                            <Icon name="material-symbols:headphones-outline" class="text-white text-[4rem]"></Icon>
+                        </div>
+                        <div class="grow w-full">
+                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">KZ Castor (Bass Var)</div>
+                            <div class="text-50 text-sm font-medium">In-Ear Monitor</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-nowrap items-stretch h-24 gap-4 rounded-[var(--radius-large)]">
+                        <div class="w-24 h-24 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                            <Icon name="material-symbols:earbuds-2-outline" class="text-white text-[4rem]"></Icon>
+                        </div>
+                        <div class="grow w-full">
+                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">KZ Carol Pro</div>
+                            <div class="text-50 text-sm font-medium">True Wireless Stereo</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-nowrap items-stretch h-24 gap-4 rounded-[var(--radius-large)]">
+                        <div class="w-24 h-24 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                            <Icon name="material-symbols:flowchart-outline" class="text-white text-[4rem]"></Icon>
+                        </div>
+                        <div class="grow w-full">
+                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">JCALLY JM6 Pro</div>
+                            <div class="text-50 text-sm font-medium">DAC & Amplifier</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-nowrap items-stretch h-24 gap-4 rounded-[var(--radius-large)]">
+                        <div class="w-24 h-24 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                            <Icon name="material-symbols:album-outline" class="text-white text-[4rem]"></Icon>
+                        </div>
+                        <div class="grow w-full">
+                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">FiiO Snowsky Echo Mini</div>
+                            <div class="text-50 text-sm font-medium">Digital Audio Player</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </MainGridLayout>
