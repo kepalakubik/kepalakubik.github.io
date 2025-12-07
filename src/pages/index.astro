@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
+import audioGear from "../data/audio-gear.json";
 ---
 <MainGridLayout title={i18n(I18nKey.about)}>
     <div class="flex flex-col gap-y-4 w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
@@ -80,46 +81,18 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
                     </a>
                 </h1>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
-                    <div class="flex flex-nowrap items-stretch h-16 gap-4 rounded-[var(--radius-large)]">
-                        <div class="w-16 h-16 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
-                            <Icon name="material-symbols:earbuds-2-outline" class="text-white text-[2.5rem]"></Icon>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                    {audioGear.map(data => (
+                        <div class="flex flex-nowrap items-stretch h-16 gap-4 rounded-[var(--radius-large)]">
+                            <div class="w-16 h-16 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                                <Icon name={data.icon} class="text-white text-[2.5rem]"></Icon>
+                            </div>
+                            <div class="grow w-full">
+                                <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">{data.name}</div>
+                                <div class="text-50 text-sm font-medium">{data.type}</div>
+                            </div>
                         </div>
-                        <div class="grow w-full">
-                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">KZ Castor (Bass Var)</div>
-                            <div class="text-50 text-sm font-medium">In-Ear Monitor</div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-nowrap items-stretch h-16 gap-4 rounded-[var(--radius-large)]">
-                        <div class="w-16 h-16 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
-                            <Icon name="material-symbols:headphones-outline" class="text-white text-[2.5rem]"></Icon>
-                        </div>
-                        <div class="grow w-full">
-                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">KZ Carol Pro</div>
-                            <div class="text-50 text-sm font-medium">True Wireless Stereo</div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-nowrap items-stretch h-16 gap-4 rounded-[var(--radius-large)]">
-                        <div class="w-16 h-16 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
-                            <Icon name="material-symbols:flowchart-outline" class="text-white text-[2.5rem]"></Icon>
-                        </div>
-                        <div class="grow w-full">
-                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">JCALLY JM6 Pro</div>
-                            <div class="text-50 text-sm font-medium">DAC & Amplifier</div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-nowrap items-stretch h-16 gap-4 rounded-[var(--radius-large)]">
-                        <div class="w-16 h-16 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
-                            <Icon name="material-symbols:album-outline" class="text-white text-[2.5rem]"></Icon>
-                        </div>
-                        <div class="grow w-full">
-                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100">FiiO Snowsky Echo Mini</div>
-                            <div class="text-50 text-sm font-medium">Digital Audio Player</div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
         </div>

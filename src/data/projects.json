@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Tomaka Book Club",
+    "desc": "Website resmi Tomaka Book Club",
+    "icon": "material-symbols:menu-book-outline-rounded",
+    "url": "https://tomakabookclub.my.id/"
+  },
+  {
+    "name": "Anigure",
+    "desc": "Konsep website marketplace action figure",
+    "icon": "material-symbols:face-retouching-natural-outline-rounded",
+    "url": "https://kepalakubik.my.id/Anigure/"
+  },
+  {
+    "name": "PanicButton-UNM",
+    "desc": "Konsep website panic button untuk mahasiswa",
+    "icon": "material-symbols:security-update-warning-outline-rounded",
+    "url": "https://github.com/kepalakubik/PanicButton-UNM"
+  },
+  {
+    "name": "InfoBoard",
+    "desc": "Papan jadwal digital untuk penggunaan pemerintahan",
+    "icon": "material-symbols:space-dashboard-outline-rounded",
+    "url": "https://github.com/kepalakubik/InfoBoard"
+  }
+]

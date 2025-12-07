@@ -1,0 +1,35 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+import projects from "../data/projects.json";
+---
+
+<MainGridLayout>
+    <div class="card-base z-10 px-9 py-6 relative w-full">
+        <section class="prose dark:prose-invert prose-base !max-w-none">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {projects.map(data => (
+                    <div class="flex flex-nowrap items-stretch gap-4 rounded-[var(--radius-large)]">
+                        <div class="w-20 h-20 self-center sm:w-28 sm:h-28 flex-shrink-0 flex justify-center items-center rounded-lg overflow-hidden bg-[var(--primary)]">
+                            <Icon name={data.icon} class="text-white text-[3rem] sm:text-[4rem]"></Icon>
+                        </div>
+                        <div class="grow w-full">
+                            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 mb-1">{data.name}</div>
+                            <div class="text-50 text-sm font-medium">{data.desc}</div>
+                        </div>
+                        <a href={data.url} target="_blank" rel="noopener noreferrer"
+                            class="flex btn-regular w-[3.25rem] rounded-lg bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" role="img"
+                                    class="transition text-[var(--primary)] text-4xl mx-auto iconify iconify--material-symbols"
+                                    width="1em" height="1em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </section>
+    </div>
+</MainGridLayout>

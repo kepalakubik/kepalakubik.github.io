@@ -1,0 +1,22 @@
+[
+  {
+    "name": "KZ Castor (Bass Var)",
+    "type": "In-Ear Monitor",
+    "icon": "material-symbols:earbuds-2-outline-rounded"
+  },
+  {
+    "name": "KZ Carol Pro",
+    "type": "True Wireless Stereo",
+    "icon": "material-symbols:headphones-outline-rounded"
+  },
+  {
+    "name": "JCALLY JM6 Pro",
+    "type": "DAC & Amplifier",
+    "icon": "material-symbols:flowchart-outline"
+  },
+  {
+    "name": "FiiO Snowsky Echo Mini",
+    "type": "Digital Audio Player",
+    "icon": "material-symbols:album-outline"
+  }
+]
