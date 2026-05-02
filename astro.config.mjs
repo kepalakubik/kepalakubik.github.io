@@ -8,6 +8,7 @@ import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { fileURLToPath } from "url";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
@@ -28,7 +29,10 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 export default defineConfig({
 	site: "https://kepalakubik.my.id/",
 	base: "/",
-	trailingSlash: "always",
+  trailingSlash: "always",
+  build: {
+		inlineStylesheets: 'auto',
+	},
 	integrations: [
 		tailwind({
 			nesting: true,
@@ -49,7 +53,7 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
-				"preprocess: vitePreprocess(),": ["*"],
+			  "preprocess: vitePreprocess(),": ["*"],
 				"fa6-brands": ["*"],
 				"fa6-regular": ["*"],
 				"fa6-solid": ["*"],
@@ -154,7 +158,36 @@ export default defineConfig({
 		],
 	},
 	vite: {
+	  plugins: [
+			{
+				name: 'block-iconify-json-imports',
+				enforce: 'pre', // Run before vite:json plugin
+				load(id) {
+					// Block ALL @iconify-json imports since manual addIcon() is used in preload-icons.ts
+					// This prevents bundling large JSON files and forces dynamic icons to use CDN
+					if (id.includes('@iconify-json')) {
+						if (id.endsWith('/icons.json')) {
+							return JSON.stringify({
+								prefix: "",
+								icons: {},
+								width: 24,
+								height: 24
+							});
+						}
+						if (id.endsWith('/info.json')) {
+							return JSON.stringify({
+								name: "",
+								total: 0,
+								version: "1.0.0"
+							});
+						}
+					}
+				}
+			}
+		],
 		build: {
+			minify: 'esbuild',
+			cssCodeSplit: true,
 			rollupOptions: {
 				onwarn(warning, warn) {
 					// temporarily suppress this warning
@@ -166,7 +199,53 @@ export default defineConfig({
 					}
 					warn(warning);
 				},
+				output: {
+					manualChunks: (id) => {
+  			    // Vendor chunking for better caching and code splitting
+  					if (id.includes('node_modules')) {
+  						// Exclude icon JSON data from bundles - loaded from API instead
+  						if (id.includes('@iconify-json') || id.includes('@iconify/json')) {
+  							return undefined;
+  						}
+  						// Split heavy libraries into separate chunks
+  						if (id.includes('photoswipe')) {
+  							return 'vendor-photoswipe';
+  						}
+  						if (id.includes('swup') || id.includes('@swup')) {
+  							return 'vendor-swup';
+  						}
+  						if (id.includes('overlayscrollbars')) {
+  							return 'vendor-scrollbar';
+  						}
+  						if (id.includes('@iconify/svelte')) {
+  							return 'vendor-iconify';
+  						}
+  						if (id.includes('astro-icon')) {
+  							return 'vendor-icons';
+  						}
+  						// Split Tailwind/CSS frameworks
+  						if (id.includes('tailwindcss')) {
+  							return 'vendor-tailwind';
+  						}
+  						// Other vendor dependencies
+  						return 'vendor';
+  					}
+  				},
+					// Optimize output with smaller chunks
+					chunkFileNames: '_astro/[name].[hash].js',
+					assetFileNames: '_astro/[name].[hash][extname]',
+				},
 			},
+			// Enable aggressive tree-shaking
+			target: 'esnext',
+		},
+		optimizeDeps: {
+			exclude: [
+				'@iconify-json/material-symbols',
+				'@iconify-json/fa6-brands',
+				'@iconify-json/fa6-regular',
+				'@iconify-json/fa6-solid'
+			]
 		},
 	},
 });

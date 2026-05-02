@@ -1,5 +1,11 @@
 [
   {
+    "name": "Keby's Hyprland",
+    "desc": "Fork dari illogical-impulse dengan fitur tambahan",
+    "icon": "material-symbols:desktop-windows-outline-rounded",
+    "url": "https://github.com/kepalakubik/dots-hyprland/"
+  },
+  {
     "name": "Tomaka Book Club",
     "desc": "Website resmi Tomaka Book Club",
     "icon": "material-symbols:menu-book-outline-rounded",

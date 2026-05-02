@@ -13,8 +13,8 @@ export const siteConfig: SiteConfig = {
 	description: "Seorang programmer fullstack dengan fokus pada pengembangan website",
 	lang: "id", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
-		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
-		fixed: true, // Hide the theme color picker for visitors
+		hue: 230, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
 		enable: false,
@@ -43,7 +43,11 @@ export const navBarConfig: NavBarConfig = {
     {
 		  name: "Proyek",
 			url: "/projects/"
-		},
+    },
+    {
+      name: "Komunitas",
+      url: "/community/"
+    },
 		LinkPreset.Archive,
 		{
 			name: "Blog",
@@ -62,7 +66,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/favicon.svg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "assets/images/pfp.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Ryan",
 	aka: "kepalakubik",
 	bio: "Programmer & Casual Audiophile",
