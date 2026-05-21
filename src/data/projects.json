@@ -1,5 +1,11 @@
 [
   {
+    "name": "Blue Archive Halos - Pyroxene",
+    "desc": "Membawa halo dari Blue Archive ke Minecraft",
+    "icon": "material-symbols:circle-outline",
+    "url": "https://modrinth.com/mod/blue-archive-halos-pyroxene"
+  },
+  {
     "name": "Keby's Hyprland",
     "desc": "Fork dari illogical-impulse dengan fitur tambahan",
     "icon": "material-symbols:desktop-windows-outline-rounded",
