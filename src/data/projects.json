@@ -1,5 +1,11 @@
 [
   {
+    "name": "sys2dis",
+    "desc": "Discord RPC untuk menampilkan system resource usage",
+    "icon": "material-symbols:browse-activity-outline-rounded",
+    "url": "https://github.com/kepalakubik/sys2dis"
+  },
+  {
     "name": "Blue Archive Halos - Pyroxene",
     "desc": "Membawa halo dari Blue Archive ke Minecraft",
     "icon": "material-symbols:circle-outline",
