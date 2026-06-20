@@ -104,9 +104,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://trakteer.id/kepalakubik/tip",
 		},
 		{
-			name: "Trakteer",
+			name: "Ko-fi",
 			icon: "fa7-solid:coffee",
-			url: "https://trakteer.id/kepalakubik/tip",
+			url: "https://ko-fi.com/kepalakubik",
 		}
 	],
 };
