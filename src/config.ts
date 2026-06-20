@@ -102,6 +102,11 @@ export const profileConfig: ProfileConfig = {
 			name: "Trakteer",
 			icon: "fa6-solid:heart",
 			url: "https://trakteer.id/kepalakubik/tip",
+		},
+		{
+			name: "Trakteer",
+			icon: "fa7-solid:coffee",
+			url: "https://trakteer.id/kepalakubik/tip",
 		}
 	],
 };
