@@ -53,11 +53,11 @@ export const navBarConfig: NavBarConfig = {
 			name: "Blog",
 			"url": "/blog/"
 		},
-		{
+/*		{
 			name: "Audio Review",
 			url: "/audio-review/"
 		},
-/*		{
+		{
 			name: "GitHub",
 			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
