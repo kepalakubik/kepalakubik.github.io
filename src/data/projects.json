@@ -1,44 +1,50 @@
 [
   {
     "name": "sys2dis",
-    "desc": "Discord RPC untuk menampilkan system resource usage",
+    "desc": "Sebuah CLI untuk menampilkan penggunaan sumber daya komputer melalui Discord RPC",
     "icon": "material-symbols:browse-activity-outline-rounded",
-    "url": "https://github.com/kepalakubik/sys2dis"
+    "url": "https://github.com/kepalakubik/sys2dis",
+    "type": "CLI",
+    "lang": "Rust"
   },
   {
-    "name": "Blue Archive Halos - Pyroxene",
-    "desc": "Membawa halo dari Blue Archive ke Minecraft",
+    "name": "Pyroxene",
+    "desc": "Rewrite dari mod Blue Archive Halos dengan fitur tambahan, perbaikan, dan dukungan untuk versi Minecraft terbaru",
     "icon": "material-symbols:circle-outline",
-    "url": "https://modrinth.com/mod/blue-archive-halos-pyroxene"
+    "url": "https://modrinth.com/mod/blue-archive-halos-pyroxene",
+    "type": "Minecraft Mod",
+    "lang": "Java"
   },
   {
     "name": "Keby's Hyprland",
-    "desc": "Fork dari illogical-impulse dengan fitur tambahan",
+    "desc": "Fork dari dotfiles illogical-impulse untuk Hyprland dengan tambahan fitur sesuai selera ku",
     "icon": "material-symbols:desktop-windows-outline-rounded",
-    "url": "https://github.com/kepalakubik/dots-hyprland/"
+    "url": "https://github.com/kepalakubik/dots-hyprland/",
+    "type": "Hyprland & Quickshell",
+    "lang": "QML"
   },
   {
     "name": "Tomaka Book Club",
-    "desc": "Website resmi Tomaka Book Club",
+    "desc": "Website resmi komunitas buku Tomaka Book Club. Membaca itu menyenangkan!",
     "icon": "material-symbols:menu-book-outline-rounded",
-    "url": "https://tomakabookclub.my.id/"
+    "url": "https://tomakabookclub.my.id/",
+    "type": "Website",
+    "lang": "Astro.js"
   },
   {
     "name": "Anigure",
-    "desc": "Konsep website marketplace action figure",
+    "desc": "Konsep website marketplace action figure. Dibuat dalam sehari karena HRD butuh portofolio XD.",
     "icon": "material-symbols:face-retouching-natural-outline-rounded",
-    "url": "https://kepalakubik.my.id/Anigure/"
+    "url": "https://kepalakubik.my.id/Anigure/",
+    "type": "Website",
+    "lang": "HTML, CSS, & JS"
   },
   {
     "name": "PanicButton-UNM",
-    "desc": "Konsep website panic button untuk mahasiswa",
+    "desc": "Konsep website panic button untuk kebutuhan tugas mahasiswa teman ku",
     "icon": "material-symbols:security-update-warning-outline-rounded",
-    "url": "https://github.com/kepalakubik/PanicButton-UNM"
-  },
-  {
-    "name": "InfoBoard",
-    "desc": "Papan jadwal digital untuk penggunaan pemerintahan",
-    "icon": "material-symbols:space-dashboard-outline-rounded",
-    "url": "https://github.com/kepalakubik/InfoBoard"
+    "url": "https://github.com/kepalakubik/PanicButton-UNM",
+    "type": "Website",
+    "lang": "Nunjucks, Node.js"
   }
 ]

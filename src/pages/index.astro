@@ -1,7 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import I18nKey from "../i18n/i18nKey";
-import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 import audioGear from "../data/audio-gear.json";
 ---
@@ -21,7 +19,7 @@ import audioGear from "../data/audio-gear.json";
         <div class="card-base z-10 px-9 py-6 relative w-full ">
             <section class="prose dark:prose-invert prose-base !max-w-none custom-md">
                 <h1 id="keahlian">
-                    🧑‍💻 Keahlian
+                    <Icon name="material-symbols:stars-2-outline-rounded" class="text-4xl inline-block align-text-bottom"></Icon> Keahlian
                     <a class="anchor" href="#keahlian">
                         <span class="anchor-icon" data-pagefind-ignore="">#</span>
                     </a>
@@ -69,7 +67,7 @@ import audioGear from "../data/audio-gear.json";
         <div class="card-base z-10 px-9 py-6 relative w-full ">
             <section class="prose dark:prose-invert prose-base !max-w-none custom-md">
                 <h1 id="audio-gear">
-                    🎧 Audio Gear
+                    <Icon name="material-symbols:headphones-outline-rounded" class="text-4xl inline-block align-text-bottom"></Icon> Audio Gear
                     <a class="anchor" href="#audio-gear">
                         <span class="anchor-icon" data-pagefind-ignore="">#</span>
                     </a>
