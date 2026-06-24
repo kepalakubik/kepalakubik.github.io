@@ -1,14 +1,5 @@
 [
   {
-    "name": "sys2dis",
-    "desc": "Sebuah CLI untuk menampilkan penggunaan sumber daya komputer melalui Discord RPC",
-    "icon": "material-symbols:browse-activity-outline-rounded",
-    "url": "https://github.com/kepalakubik/sys2dis",
-    "type": "CLI",
-    "lang": "Rust",
-    "status": "Maintained"
-  },
-  {
     "name": "Pyroxene",
     "desc": "Rewrite dari mod Blue Archive Halos dengan fitur tambahan, perbaikan, dan dukungan untuk versi Minecraft terbaru",
     "icon": "material-symbols:circle-outline",
@@ -18,15 +9,6 @@
     "status": "Active"
   },
   {
-    "name": "Keby's Hyprland",
-    "desc": "Fork dari dotfiles illogical-impulse untuk Hyprland dengan tambahan fitur sesuai selera ku",
-    "icon": "material-symbols:desktop-windows-outline-rounded",
-    "url": "https://github.com/kepalakubik/dots-hyprland/",
-    "type": "Hyprland & Quickshell",
-    "lang": "QML",
-    "status": "Maintained"
-  },
-  {
     "name": "Tomaka Book Club",
     "desc": "Website resmi komunitas buku Tomaka Book Club. Membaca itu menyenangkan!",
     "icon": "material-symbols:menu-book-outline-rounded",
@@ -34,6 +16,24 @@
     "type": "Website",
     "lang": "Astro.js",
     "status": "Active"
+  },
+  {
+    "name": "sys2dis",
+    "desc": "Sebuah CLI untuk menampilkan penggunaan sumber daya komputer melalui Discord RPC",
+    "icon": "material-symbols:browse-activity-outline-rounded",
+    "url": "https://github.com/kepalakubik/sys2dis",
+    "type": "CLI",
+    "lang": "Rust",
+    "status": "Maintained"
+  },
+  {
+    "name": "Keby's Hyprland",
+    "desc": "Fork dari dotfiles illogical-impulse untuk Hyprland dengan tambahan fitur sesuai selera ku",
+    "icon": "material-symbols:desktop-windows-outline-rounded",
+    "url": "https://github.com/kepalakubik/dots-hyprland/",
+    "type": "Hyprland & Quickshell",
+    "lang": "QML",
+    "status": "Archived"
   },
   {
     "name": "Anigure",
