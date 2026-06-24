@@ -5,41 +5,41 @@ import projects from "../data/projects.json";
 ---
 
 <MainGridLayout title="Proyek">
-    <div class="card-base z-10 px-9 py-6 relative w-full">
-        <section class="prose dark:prose-invert prose-base !max-w-none">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 [&>*]:min-h-24">
-                {projects.map(data => (
-                    <div class="flex flex-nowrap items-stretch gap-4 rounded-[var(--radius-large)]">
-                        <div class="grow w-full flex flex-col">
-                       		<h3 class="!m-0 flex items-center pb-1">
-	                       		<div class="mr-2 p-0.5 self-center flex-shrink-0 flex justify-center items-center rounded-sm overflow-hidden bg-[var(--primary)]">
-	                                <Icon name={data.icon} class="text-white"></Icon>
-	                            </div>
-                         		{data.name}
-                         	</h3>
-                          	
-                            <div class="text-50 text-sm font-medium pb-3">{data.desc}</div>
-
-                            <div class="mt-auto font-bold text-50 text-sm">
-                            	Tipe: {data.type}
-                            	<br>
-                             	Lang: {data.lang}
+    <section class="prose dark:prose-invert prose-base !max-w-none">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 [&>*]:min-h-24">
+            {projects.map(data => (
+                <div class="card-base p-4 flex flex-nowrap items-stretch gap-4 rounded-[var(--radius-large)]">
+                    <div class="grow w-full flex flex-col">
+                      		<h3 class="!m-0 flex items-center pb-1">
+                       		<div class="mr-2 p-0.5 self-center flex-shrink-0 flex justify-center items-center rounded-sm overflow-hidden bg-[var(--primary)]">
+                                <Icon name={data.icon} class="text-white"></Icon>
                             </div>
+                      		{data.name}
+                       	</h3>
+                       	
+                        <div class="text-50 text-sm font-medium pb-3">{data.desc}</div>
+
+                        <div class="mt-auto font-bold text-50 text-sm">
+                           	Type: {data.type}
+                           	<br>
+                           	Lang: {data.lang}
+                            <br>
+                            Status: {data.status}
                         </div>
-                        
-                        <a href={data.url} target="_blank" rel="noopener noreferrer"
-                            class="flex btn-regular w-[3.25rem] rounded-lg bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    aria-hidden="true" role="img"
-                                    class="transition text-[var(--primary)] text-4xl mx-auto iconify iconify--material-symbols"
-                                    width="1em" height="1em" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"></path>
-                            </svg>
-                        </a>
                     </div>
-                ))}
-            </div>
-        </section>
-    </div>
+                    
+                    <a href={data.url} target="_blank" rel="noopener noreferrer"
+                        class="flex btn-regular w-[3.25rem] rounded-lg bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img"
+                                class="transition text-[var(--primary)] text-4xl mx-auto iconify iconify--material-symbols"
+                                width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z"></path>
+                        </svg>
+                    </a>
+                </div>
+            ))}
+        </div>
+    </section>
 </MainGridLayout>

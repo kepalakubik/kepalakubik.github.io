@@ -5,7 +5,8 @@
     "icon": "material-symbols:browse-activity-outline-rounded",
     "url": "https://github.com/kepalakubik/sys2dis",
     "type": "CLI",
-    "lang": "Rust"
+    "lang": "Rust",
+    "status": "Maintained"
   },
   {
     "name": "Pyroxene",
@@ -13,7 +14,8 @@
     "icon": "material-symbols:circle-outline",
     "url": "https://modrinth.com/mod/blue-archive-halos-pyroxene",
     "type": "Minecraft Mod",
-    "lang": "Java"
+    "lang": "Java",
+    "status": "Active"
   },
   {
     "name": "Keby's Hyprland",
@@ -21,7 +23,8 @@
     "icon": "material-symbols:desktop-windows-outline-rounded",
     "url": "https://github.com/kepalakubik/dots-hyprland/",
     "type": "Hyprland & Quickshell",
-    "lang": "QML"
+    "lang": "QML",
+    "status": "Maintained"
   },
   {
     "name": "Tomaka Book Club",
@@ -29,7 +32,8 @@
     "icon": "material-symbols:menu-book-outline-rounded",
     "url": "https://tomakabookclub.my.id/",
     "type": "Website",
-    "lang": "Astro.js"
+    "lang": "Astro.js",
+    "status": "Active"
   },
   {
     "name": "Anigure",
@@ -37,7 +41,8 @@
     "icon": "material-symbols:face-retouching-natural-outline-rounded",
     "url": "https://kepalakubik.my.id/Anigure/",
     "type": "Website",
-    "lang": "HTML, CSS, & JS"
+    "lang": "HTML, CSS, & JS",
+    "status": "Archived"
   },
   {
     "name": "PanicButton-UNM",
@@ -45,6 +50,7 @@
     "icon": "material-symbols:security-update-warning-outline-rounded",
     "url": "https://github.com/kepalakubik/PanicButton-UNM",
     "type": "Website",
-    "lang": "Nunjucks, Node.js"
+    "lang": "Nunjucks, Node.js",
+    "status": "Archived"
   }
 ]
