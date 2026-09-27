@@ -1,3 +1,5 @@
+@reference "./main.css";
+
 .expressive-code {
     .frame {
         @apply !shadow-none;
